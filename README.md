@@ -48,7 +48,7 @@ launched view2
 ![Terminate instance linux AMI](https://user-images.githubusercontent.com/20144507/111040981-3fe4ed00-8436-11eb-88ef-6fda2157fcb7.png)
 ![Terminate instance linux AMI VIEW](https://user-images.githubusercontent.com/20144507/111040986-45dace00-8436-11eb-92de-4bbe96aea592.png)
 
-
+Note : 
 
 Amazon EC2 instances
  Amazon Elastic Block Store (EBS)
@@ -60,3 +60,8 @@ Amazon EC2 instances
     Step 3. Update the Systems Manager Agent
     Step 4. Run a Remote Shell Script
     Step 5. Terminate Your Resources
+
+
+**10. Amazon EC2 - Launch Wordpress website**
+      
+        select wordpress EC2 AMI market place
