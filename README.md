@@ -8,13 +8,17 @@ AWS C
 
 In this section i am going to explain how to create AMI (Amazon machine Image) instance where we can launch different flavours of OS(Operating systems)         like linux, windows and Mac. In this example i am creating an instance of Amazon linux AMI.
 
-     1. Choose AMI
-     2. Choose Instance Type
-     3. Configure Instance
-     4. Add Storage
-     5. Add Tags
-     6. Configure Security Group
-     7. Review
+     1. Choose AMI : 
+
+![AdminDeleteOrderPortal](https://user-images.githubusercontent.com/20144507/111039829-6d2e9c80-8430-11eb-972b-1955ba0c9a1a.png)
+
+
+     3. Choose Instance Type
+     4. Configure Instance
+     5. Add Storage
+     6. Add Tags
+     7. Configure Security Group
+     8. Review
 
 Amazon EC2 instances
  Amazon Elastic Block Store (EBS)
