@@ -37,11 +37,16 @@ In this section i am going to explain how to create AMI (Amazon machine Image) i
 
       
     7. Review
+   
+  ![create key pair linux ami instance](https://user-images.githubusercontent.com/20144507/111040967-28a5ff80-8436-11eb-9790-b15be9a78db1.png)
+
 ![launch status EC2 instance AWS](https://user-images.githubusercontent.com/20144507/111040505-7a00bf80-8433-11eb-9ce7-6098db9864b8.png)
 Launched view1
 ![launched instance linux AMI_view1](https://user-images.githubusercontent.com/20144507/111040673-6efa5f00-8434-11eb-851d-72aae1991116.png)
 launched view2
 ![launched instance linux AMI_view2 ](https://user-images.githubusercontent.com/20144507/111040674-715cb900-8434-11eb-9ac4-cb51a88e1ac6.png)
+![Terminate instance linux AMI](https://user-images.githubusercontent.com/20144507/111040981-3fe4ed00-8436-11eb-88ef-6fda2157fcb7.png)
+![Terminate instance linux AMI VIEW](https://user-images.githubusercontent.com/20144507/111040986-45dace00-8436-11eb-92de-4bbe96aea592.png)
 
 
 
