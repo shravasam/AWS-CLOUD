@@ -88,7 +88,7 @@ Amazon EC2 instances
       which leads you can not access EC2 instances what you will create in the future. This step is very important. 
       For every EC2 instance you have to connect with different user and with root privilages. To connect to EC2 instant using SSH client.
       
-    Finally i did create a New user called centos
+    **Finally i did create a New user called centos and established the root privilages so that we can perform system admin operations.**
     sravan@sravan-Aspire-E1-470P:~$ adduser centos
     adduser: Only root may add a user or group to the system.
     sravan@sravan-Aspire-E1-470P:~$ sudo bash
