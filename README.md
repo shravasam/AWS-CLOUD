@@ -83,8 +83,11 @@ Amazon EC2 instances
       So we have to give root privilages to the user.
       
       How to Fix “Username is not in the sudoers file. This incident will be reported” in Ubuntu ?
-      Do run the below commands to resolve this problems. unless if you can't give root privilages to the future new users you can not give privilages to the user        so that it is not possible access the SSH clients. which leads you can not access EC2 instances what you will create in the future. This step is very important. 
-     
+      Do run the below commands to resolve this problems. unless if you can't give root privilages to the future new users you can not give privilages
+      to the user so that it is not possible to access the SSH clients.
+      which leads you can not access EC2 instances what you will create in the future. This step is very important. 
+      For every EC2 instance you have to connect with different user and with root privilages. To connect to EC2 instant using SSH client.
+      
       
       
 
