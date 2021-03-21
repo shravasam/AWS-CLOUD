@@ -88,8 +88,93 @@ Amazon EC2 instances
       which leads you can not access EC2 instances what you will create in the future. This step is very important. 
       For every EC2 instance you have to connect with different user and with root privilages. To connect to EC2 instant using SSH client.
       
-      
-      
+    Finally i did create a New user called centos
+    sravan@sravan-Aspire-E1-470P:~$ adduser centos
+    adduser: Only root may add a user or group to the system.
+    sravan@sravan-Aspire-E1-470P:~$ sudo bash
+    sudo: unable to stat /etc/sudoers.d/README: Permission denied
+    root@sravan-Aspire-E1-470P:~# pwd
+    /home/sravan
+    root@sravan-Aspire-E1-470P:~# chmod -R 777 /etc/sudoers.d
+    root@sravan-Aspire-E1-470P:~# sudo bash
+    sudo: /etc/sudoers.d is world writable
+    root@sravan-Aspire-E1-470P:~# adduser centos
+    Adding user `centos' ...
+    Adding new group `centos' (1006) ...
+    Adding new user `centos' (1008) with group `centos' ...
+    Creating home directory `/home/centos' ...
+    Copying files from `/etc/skel' ...
+    Enter new UNIX password: 
+    Retype new UNIX password: 
+    passwd: password updated successfully
+    Changing the user information for centos
+    Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+    Is the information correct? [Y/n] Y
+    root@sravan-Aspire-E1-470P:~#  usermod -aG sudo centos
+    root@sravan-Aspire-E1-470P:~# su -centos
+    bash: entos: command not found
+    root@sravan-Aspire-E1-470P:~# su - centos
+    To run a command as administrator (user "root"), use "sudo <command>".
+    See "man sudo_root" for details.
+
+    centos@sravan-Aspire-E1-470P:~$ man sudo_root
+    centos@sravan-Aspire-E1-470P:~$ grep '^sudo' /etc/group
+    sudo:x:27:sravan,usr,centos
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo cp -r /home/sravan/Documents/aws/vasam.pem /home/centos/
+    sudo: /etc/sudoers.d is world writable
+    
+    centos@sravan-Aspire-E1-470P:~$ ssh -i "vasam.pem" root@ec2-54-216-61-140.eu-west-1.compute.amazonaws.com
+    Load key "vasam.pem": Permission denied
+    Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo ssh -i "vasam.pem" root@ec2-54-216-61-140.eu-west-1.compute.amazonaws.com
+    sudo: /etc/sudoers.d is world writable
+    Please login as the user "centos" rather than the user "root".
+
+    Connection to ec2-54-216-61-140.eu-west-1.compute.amazonaws.com closed.
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo apt -get update
+    sudo: /etc/sudoers.d is world writable
+    E: Command line option 'g' [from -get] is not understood in combination with the other options.
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo apt-get update
+    sudo: /etc/sudoers.d is world writable
+    Ign:1 cdrom://Ubuntu 16.04.3 LTS _Xenial Xerus_ - Release amd64 (20170801) xenial InRelease
+    Ign:2 cdrom://Ubuntu 16.04.3 LTS _Xenial Xerus_ - Release amd64 (20170801) xenial Release
+    Ign:3 cdrom://Ubuntu 16.04.3 LTS _Xenial Xerus_ - Release amd64 (20170801) xenial/main amd64 Packages
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo apt-get upgrade
+    sudo: /etc/sudoers.d is world writable
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    Calculating upgrade... Done
+    The following packages were automatically installed and are no longer required:
+    adobe-flash-properties-gtk cdbs dh-translations gcc-5-base:i386 gnat-4.9-base intltool kde-telepathy-desktop-applets
+    kde-telepathy-filetransfer-handler kde-telepathy-send-file libasyncns0:i386 libflac8:i386 libgnat-4.9 libjpeg62 libogg0:i386 libossp-uuid16
+    libpulse0:i386 libreadline5 libsamplerate0:i386 libsndfile1:i386 libspeexdsp1:i386 libstdc++6:i386 libvorbis0a:i386 libvorbisenc2:i386
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo yum install -y https://s3.region.amazonaws.com/amazon-ssm-region/latest/linux_amd64/amazon-ssm-agent.rpm
+    sudo: /etc/sudoers.d is world writable
+    There are no enabled repos.
+    Run "yum repolist all" to see the repos you have.
+    You can enable repos with yum-config-manager --enable <repo>
+    
+    centos@sravan-Aspire-E1-470P:~$ yum-config-manager --enable
+    You must be root to change the yum configuration.
+    
+    centos@sravan-Aspire-E1-470P:~$ sudo bash
+    sudo: /etc/sudoers.d is world writable
+    
+    root@sravan-Aspire-E1-470P:~# yum-config-manager --enable
+
+    
 
 Step 3: Verify New User
       select wordpress EC2 AMI market place and connect to the instance from linux.
