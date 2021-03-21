@@ -64,4 +64,29 @@ Amazon EC2 instances
 
 **10. Amazon EC2 - Launch Wordpress website**
       
-        select wordpress EC2 AMI market place
+      Here i am launching a centOS wordpress image in linux ubuntu, Steps to follow 
+      1. Create a new user as "centos" when you tried to run using root user it will ask you somethint like this.
+      ssh -i "vasam.pem" root@ec2-54-216-61-140.eu-west-1.compute.amazonaws.com
+      Please login as the user "centos" rather than the user "root".
+      Follow following steps to create new user in linux ubuntu
+      Step 1:  Add The User
+      adduser vas
+      Step 2: Grant Root Privileges
+      usermod -aG sudo vas
+      
+      Step 3: Verify New User
+      su - vas
+      grep '^sudo' /etc/group
+      sudo:x:27:vas
+      
+      if there is problem in the file you will see this error "vas is not in the sudoers file.  This incident will be reported."
+      So we have to give root privilages to the user.
+      
+      How to Fix “Username is not in the sudoers file. This incident will be reported” in Ubuntu ?
+      Do run the below commands to resolve this problems. unless if you can't give root privilages to the future new users you can not give privilages to the user        so that it is not possible access the SSH clients. which leads you can not access EC2 instances what you will create in the future. This step is very important. 
+     
+      
+      
+
+Step 3: Verify New User
+      select wordpress EC2 AMI market place and connect to the instance from linux.
