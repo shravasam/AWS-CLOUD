@@ -1,1 +1,10 @@
 Amazon Glue ETL jobs
+·         What is AWS Glue?
+·         When do you use AWS Glue?
+·         AWS Glue Benefits
+·         AWS Glue Concepts
+·         AWS Glue Terminologies
+·         How does AWS Glue work?
+
+Aws glue is a fully managed ETL service that makes it simple and cost effective to categorize your data.clean it. enrich it, and move it reliably between various data stores.
+its serverless.
