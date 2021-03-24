@@ -22,3 +22,14 @@ AWS Glue Crawlwers --->
     3) ETL Engine : generates python /scala code
     4) Glue Triggers : jobs
     5) Glue workflow : different steps of glue crawlers
+How crawler work :
+      1) classifies data to determine the format, schema and associated properties of the raw data
+      2) Groups data into tables (or partitions if data is partitiones )
+      3) writes metadata to the data catalog
+      
+      Types of classifiers
+               Built in claffifier-- json
+               custom classifier
+               
+               
+ 
