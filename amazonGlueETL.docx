@@ -8,3 +8,17 @@ Amazon Glue ETL jobs
 
 Aws glue is a fully managed ETL service that makes it simple and cost effective to categorize your data.clean it. enrich it, and move it reliably between various data stores.
 its serverless.
+
+ETL workflow-Rdbms,oracle,sql server etc (extract) --> staging(Transform) -->Data warehousing(Load)
+Advantages of data warehouse --> combined view of data 
+AWS Glue Crawlwers ---> 
+5 major componets :
+   
+    1) Glue Data catalog
+    2) Glue crawlers : Connects to data source (s3, Dydb) to scan data and creates metadata tables in Glue Data Catalog.
+                       Can scan multiple data sources in single run
+                       once completed, it will create table in data catalog
+                       this table can be used in Athena, ETL jobs, Redshifts spectrum
+    3) ETL Engine : generates python /scala code
+    4) Glue Triggers : jobs
+    5) Glue workflow : different steps of glue crawlers
