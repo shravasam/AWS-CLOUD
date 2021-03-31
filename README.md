@@ -173,8 +173,11 @@ Amazon EC2 instances
     sudo: /etc/sudoers.d is world writable
     
     root@sravan-Aspire-E1-470P:~# yum-config-manager --enable
-
     
+    THERE ARE 3 WAYS TO CONNECT TO AWS INSTANCE
+    1. AWS command line interface (CLI) installation in linux ubuntu. 
+    CREAT SSM AGENT IN LINUX INSTANCE : 
+    SSM Agent isn't installed on the instance. You can install the agent on both Windows instances and Linux instances.
 
 Step 3: Verify New User
       select wordpress EC2 AMI market place and connect to the instance from linux.
